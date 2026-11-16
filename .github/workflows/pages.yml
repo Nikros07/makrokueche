@@ -1,0 +1,42 @@
+# Testet die App und veröffentlicht den Ordner public/ auf GitHub Pages.
+name: Tests und GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Immer nur eine Veröffentlichung gleichzeitig, laufende nicht abbrechen.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Tests
+        run: node --test
+      - name: Pages einrichten
+        uses: actions/configure-pages@v5
+      - name: public/ hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v5

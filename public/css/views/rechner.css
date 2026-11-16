@@ -1,0 +1,36 @@
+/* Makro-Rechner: Zusatzstile */
+.rc-suggest-wrap { position: relative; min-width: 0; }
+.rc-suggest {
+  position: absolute; left: 0; right: 0; top: 100%; z-index: 10;
+  margin: 4px 0 0; padding: 4px; list-style: none;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; box-shadow: var(--shadow); max-height: 320px; overflow-y: auto;
+}
+.rc-suggest[hidden] { display: none; }
+.rc-suggest li {
+  min-height: 44px; display: flex; flex-direction: column; justify-content: center;
+  padding: 6px 10px; border-radius: 8px; cursor: pointer;
+}
+.rc-suggest li small { color: var(--text-muted); }
+.rc-suggest li[aria-selected="true"], .rc-suggest li:hover { background: var(--accent-soft); }
+.rc-add { display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 10px; align-items: end; }
+.rc-add .btn { grid-column: 1 / -1; }
+.rc-custom-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.rc-custom-grid .wide { grid-column: 1 / -1; }
+.rc-ing { padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.rc-ing:last-child { border-bottom: 0; }
+.rc-ing-head { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.rc-ing-name { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; overflow-wrap: anywhere; font-weight: 600; }
+.rc-grams { display: flex; align-items: center; gap: 4px; flex: none; }
+.rc-grams .input { width: 84px; text-align: right; }
+.rc-ing-note { font-size: 0.85rem; color: var(--text-muted); }
+.rc-vals { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.9rem; font-variant-numeric: tabular-nums; color: var(--text-muted); }
+.rc-vals b { color: var(--text); font-weight: 650; }
+.rc-vals .p { color: var(--c-protein); }
+.rc-vals .f { color: var(--c-fat); }
+.rc-vals .c { color: var(--c-carbs); }
+.rc-remove { min-width: 44px; padding: 4px; flex: none; }
+.rc-small { font-size: 0.85rem; color: var(--text-muted); }
+.rc-total { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.rc-stack-sm { display: flex; flex-direction: column; gap: 8px; }
+input[aria-invalid="true"] { border-color: var(--danger); }

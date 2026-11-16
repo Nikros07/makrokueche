@@ -1,0 +1,20 @@
+/* Rezepte: Zusatzstile zu app.css */
+.rezepte-kopf { align-items: center; margin-bottom: 1rem; }
+.rezepte-kopf .input { flex: 1 1 220px; min-width: 0; }
+.rezept-name { overflow-wrap: anywhere; }
+.rezept-makros { font-size: 0.95rem; }
+.rezept-zutat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 12px;
+}
+.rezept-zutat > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.rezept-details summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.rezept-aktionen { margin-top: 0.25rem; }

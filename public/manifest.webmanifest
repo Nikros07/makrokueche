@@ -1,0 +1,14 @@
+{
+  "name": "Makroküche",
+  "short_name": "Makroküche",
+  "description": "Persönliche Makro-Ziele, Rezepte, Einkaufsliste und Gewichtsverlauf.",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f1e5",
+  "theme_color": "#2c5f48",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

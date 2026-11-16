@@ -1,0 +1,52 @@
+/* Gewicht-Ansicht: Zusatzstile zu app.css. Nur Farbvariablen aus app.css, keine festen Farben. */
+
+.weight-form .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.weight-form .field { min-width: 0; }
+.weight-form input[type="date"] { min-width: 0; max-width: 100%; width: 100%; }
+@media (max-width: 480px) {
+  .weight-form .form-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+.chart { display: block; width: 100%; height: auto; overflow: visible; }
+.chart-grid { stroke: var(--border); stroke-width: 1; }
+.chart-axis { fill: var(--text-muted); font-size: 16px; }
+.chart-raw {
+  fill: none;
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.chart-dot { fill: var(--text-muted); }
+.chart-dot:hover { fill: var(--accent); }
+.chart-avg {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.chart-goal { stroke: var(--accent-2); stroke-width: 1.5; stroke-dasharray: 6 5; }
+.chart-goal-label { fill: var(--accent-2); font-size: 16px; }
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.legend-item { display: inline-flex; align-items: center; gap: 6px; }
+.swatch { display: inline-block; width: 22px; border-top: 2px solid var(--text-muted); }
+.swatch-avg { border-top-width: 3.5px; border-color: var(--accent); }
+.swatch-goal { border-top-style: dashed; border-color: var(--accent-2); }
+
+.weight-list .list-item { flex-wrap: nowrap; }
+.entry-date { flex: 1 1 auto; min-width: 0; }
+.entry-kg { min-width: 5.5em; text-align: right; font-variant-numeric: tabular-nums; }
+.entry-diff {
+  min-width: 5.5em;
+  text-align: right;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}

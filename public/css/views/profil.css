@@ -1,0 +1,62 @@
+/* Profil: Zusatzstile für die Karten "KI-Zugang" und "Daten sichern" */
+
+.profil-extra {
+  gap: 1rem;
+}
+
+.profil-keys .key-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.profil-keys .key-toggle input[type="checkbox"] {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0;
+  flex: none;
+}
+
+.profil-keys details {
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}
+
+.profil-keys summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.profil-keys .hint {
+  margin: 0;
+}
+
+.profil-keys .btn,
+.profil-backup .btn {
+  max-width: 100%;
+  white-space: normal;
+}
+
+.profil-backup input[type="file"] {
+  width: 100%;
+  max-width: 100%;
+  min-height: 44px;
+  font-size: 1rem;
+}
+
+.profil-backup input[type="file"]::file-selector-button {
+  min-height: 44px;
+  margin-right: 0.75rem;
+  padding: 0 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
